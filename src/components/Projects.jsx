@@ -36,7 +36,7 @@ const projects = [
       "Real-time UI Update: Updates the DOM with matching blog titles.",
       "Minimal Delay: Smooth experience via lightweight AJAX calls.",
     ],
-    image: "./src/assets/Projects/CodeCraft.png",
+    image: "../../public/CodeCraft.png",
     link: "https://cc-blog-sigma.vercel.app/",
     github: "https://github.com/swathimanoharan1/CCBlog",
   },
@@ -57,9 +57,9 @@ const projects = [
       "Review System: Allowed customers to add, update, and delete product reviews with rating and descriptive feedback.",
       "Search Feature: Enabled search across multiple entities including products, customers, and orders based on specific criteria.",
     ],
-    image: "./src/assets/Projects/IconicThreads.png",
+    image: "../../public/IconicThreads.png",
     link: "https://github.com/yourusername/portfolio",
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/swathimanoharan1/OptimizelyCMS-Backend",
   },
 
   // Project 3
@@ -75,9 +75,9 @@ const projects = [
       "Resume Generator: This project automates the creation of a polished resume, improving efficiency and consistency for users who need to generate resumes quickly and accurately.",
       "Tkinter Projects: This bunch of projects demonstrate practical use of Tkinter for creating a graphical user interface and showcases an engaging color scheme to enhance user experience.",
     ],
-    image: "./src/assets/Projects/Pythonprojects.jpg",
+    image: "../../public/Pythonprojects.jpg",
     link: "https://github.com/yourusername/sql-editor",
-    github: "https://github.com/yourusername/sql-editor",
+    github: "https://github.com/swathimanoharan1/PythonProjects",
   },
   // Project 4
   // {
