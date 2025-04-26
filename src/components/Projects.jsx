@@ -58,8 +58,8 @@ const projects = [
       "Search Feature: Enabled search across multiple entities including products, customers, and orders based on specific criteria.",
     ],
     image: "/IconicThreads.png",
-    link: "https://github.com/yourusername/portfolio",
-    github: "https://github.com/swathimanoharan1/OptimizelyCMS-Backend",
+    //link: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/swathimanoharan1/IconicThreads",
   },
 
   // Project 3
@@ -76,7 +76,7 @@ const projects = [
       "Tkinter Projects: This bunch of projects demonstrate practical use of Tkinter for creating a graphical user interface and showcases an engaging color scheme to enhance user experience.",
     ],
     image: "/Pythonprojects.jpg",
-    link: "https://github.com/yourusername/sql-editor",
+    //link: "https://github.com/yourusername/sql-editor",
     github: "https://github.com/swathimanoharan1/PythonProjects",
   },
   // Project 4
@@ -120,8 +120,8 @@ const projects = [
       "Minimal Delay: Smooth experience via lightweight AJAX calls.",
     ],
     image: "/portfolio2025.png",
-    link: "https://github.com/yourusername/portfolio",
-    github: "https://github.com/yourusername/portfolio",
+    link: "https://portfolio2025-gold-ten.vercel.app/",
+    github: "https://github.com/swathimanoharan1/portfolio2025",
   },
   // Project 6
   // {
