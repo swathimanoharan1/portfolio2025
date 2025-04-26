@@ -124,27 +124,27 @@ const projects = [
     github: "https://github.com/yourusername/portfolio",
   },
   // Project 6
-  // {
-  //   title: "SQL Editor",
-  //   description:
-  //     "An Angular-based SQL editor for an e-commerce system with dropdowns and fill-in inputs.",
-  //   tech: ["Angular", ".NET API", "SQL Server"],
-  //   features: [
-  //     "🔸 Backend: Python & Django",
-  //     "Django ORM: Efficiently queries the database to fetch blog titles using `istartswith`, enabling case-insensitive real-time suggestions.",
-  //     "Class-based and Function-based Views: Handles data fetching and returns JSON responses.",
-  //     "URL Routing: Uses Django’s clean URL routing system.",
-  //     "JSON Response Handling: Sends structured responses with `JsonResponse`.",
-  //     "Model Integration: Blog posts are stored in a Django model.",
-  //     "🔸 Frontend Integration: jQuery & AJAX",
-  //     "AJAX Requests: Sends asynchronous GET requests while user types.",
-  //     "Real-time UI Update: Updates the DOM with matching blog titles.",
-  //     "Minimal Delay: Smooth experience via lightweight AJAX calls.",
-  //   ],
-  //   image: "./src/assets/Projects/CodeCraft.png",
-  //   link: "https://github.com/yourusername/sql-editor",
-  //   github: "https://github.com/yourusername/sql-editor",
-  // },
+  {
+    title: "SQL Editor",
+    description:
+      "An Angular-based SQL editor for an e-commerce system with dropdowns and fill-in inputs.",
+    tech: ["Angular", ".NET API", "SQL Server"],
+    features: [
+      "🔸 Backend: Python & Django",
+      "Django ORM: Efficiently queries the database to fetch blog titles using `istartswith`, enabling case-insensitive real-time suggestions.",
+      "Class-based and Function-based Views: Handles data fetching and returns JSON responses.",
+      "URL Routing: Uses Django’s clean URL routing system.",
+      "JSON Response Handling: Sends structured responses with `JsonResponse`.",
+      "Model Integration: Blog posts are stored in a Django model.",
+      "🔸 Frontend Integration: jQuery & AJAX",
+      "AJAX Requests: Sends asynchronous GET requests while user types.",
+      "Real-time UI Update: Updates the DOM with matching blog titles.",
+      "Minimal Delay: Smooth experience via lightweight AJAX calls.",
+    ],
+    image: "./src/assets/Projects/CodeCraft.png",
+    link: "https://github.com/yourusername/sql-editor",
+    github: "https://github.com/yourusername/sql-editor",
+  },
 ];
 
 const Projects = () => {
