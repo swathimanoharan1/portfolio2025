@@ -17,18 +17,19 @@ const Navbar = () => {
         </li>
         <li className="hidden md:block transition-transform duration-500 ease-in-out hover:scale-110">
           <a
-            href="#about"
-            className="text-white hover:text-orange-500 transition"
-          >
-            About
-          </a>
-        </li>
-        <li className="hidden md:block transition-transform duration-500 ease-in-out hover:scale-110">
-          <a
             href="#projects"
             className="text-white hover:text-orange-500 transition"
           >
             Projects
+          </a>
+        </li>
+
+        <li className="hidden md:block transition-transform duration-500 ease-in-out hover:scale-110">
+          <a
+            href="#blog"
+            className="text-white hover:text-orange-500 transition"
+          >
+            Blogs
           </a>
         </li>
         {/* Contact button always visible */}
