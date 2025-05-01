@@ -12,29 +12,27 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300 ">
+    <>
       <Navbar />
-      <main className="px-4 sm:px-8 md:px-16 lg:px-24">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <About />
-                <Projects />
-                <Blog />
-                <Contact />
-              </>
-            }
-          />
-          <Route path="/blogs" element={<AllBlogs />} />
-          <Route path="/blogs/:slug" element={<BlogDetail />} />
-        </Routes>
-      </main>
-      <Footer />
-      <Credit />
-    </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <About />
+              <Projects />
+              <Blog />
+              <Contact />
+              <Footer />
+              <Credit />
+            </>
+          }
+        />
+        <Route path="/blogs" element={<AllBlogs />} />
+        <Route path="/blogs/:slug" element={<BlogDetail />} />
+      </Routes>
+    </>
   );
 }
 

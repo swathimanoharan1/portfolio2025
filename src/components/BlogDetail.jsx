@@ -38,9 +38,19 @@ const BlogDetail = () => {
       ),
     },
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className="mb-4 text-gray-800 dark:text-gray-200">{children}</p>
-      ),
+      [BLOCKS.PARAGRAPH]: (node, children) => {
+        const hasPre = children.some(
+          (child) =>
+            typeof child === "object" &&
+            child?.type?.displayName === "SyntaxHighlighter"
+        );
+
+        return hasPre ? (
+          <>{children}</>
+        ) : (
+          <p className="mb-4 text-gray-800 dark:text-gray-200">{children}</p>
+        );
+      },
       [BLOCKS.HEADING_2]: (node, children) => (
         <h2 className="text-2xl font-bold mt-6 mb-2">{children}</h2>
       ),

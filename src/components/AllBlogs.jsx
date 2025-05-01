@@ -16,7 +16,7 @@ const AllBlogs = () => {
   return (
     <section className="py-24 pb-10 px-4 sm:px-8 md:px-16 lg:px-24">
       <h2 className="text-3xl font-bold mb-6 text-center">All Blog Posts</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 px-60">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {blogs.map((blog) => (
           <Link to={`/blogs/${blog.fields.slug}`} key={blog.sys.id}>
             <div className="bg-white dark:bg-[#1e1e1e] rounded-xl overflow-hidden shadow-md transition hover:shadow-lg">
