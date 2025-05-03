@@ -8,6 +8,7 @@ import Credit from "./components/Credit";
 import Blog from "./components/Blog";
 import AllBlogs from "./components/AllBlogs";
 import BlogDetail from "./components/BlogDetail";
+import Achievements from "./components/Achievements";
 import { Routes, Route } from "react-router-dom";
 import ScrollToSection from "./components/ScrollToSection";
 
@@ -23,6 +24,7 @@ function App() {
             <>
               <Hero />
               <About />
+              <Achievements />
               <Projects />
               <Blog />
               <Contact />
