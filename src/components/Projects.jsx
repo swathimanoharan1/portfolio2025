@@ -175,7 +175,7 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             onClick={() => setSelectedProject(project)}
-            className="bg-[#1c1c1c] cursor-pointer rounded-xl p-4 shadow-md border border-gray-700 hover:scale-[1.02] transition"
+            className="bg-[#1c1c1c] cursor-pointer rounded-xl p-4 border border-gray-700 shadow-lg shadow-slate-500/50 transition hover:shadow-xl"
           >
             <div className="h-52 w-full bg-gradient-to-r from-[#453634] to-[#D93D22] text-white rounded-lg mb-4">
               <img

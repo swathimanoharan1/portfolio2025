@@ -21,12 +21,14 @@ const BlogPreviewSection = () => {
       >
         <h2 className="text-4xl font-semibold mb-4">My Blogs</h2>
         <div className="w-20 h-0.5 mx-auto bg-red-500 mb-6" />
+
+        {/* Blog tiles */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
           {blogs.map((blog) => (
             <Link to={`/blogs/${blog.fields.slug}`} key={blog.sys.id}>
               <article
                 key={blog.sys.id}
-                className="w-full bg-white dark:bg-[#1e1e1e] rounded-xl overflow-hidden border border-red-500 shadow-lg shadow-red-500/50 transition hover:shadow-xl"
+                className="w-full bg-white dark:bg-[#1e1e1e] rounded-xl overflow-hidden border border-gray-500 shadow-lg shadow-slate-500/50 transition hover:shadow-xl"
               >
                 {blog.fields.thumbnail?.fields.file.url && (
                   <img

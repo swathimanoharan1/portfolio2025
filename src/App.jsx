@@ -9,11 +9,13 @@ import Blog from "./components/Blog";
 import AllBlogs from "./components/AllBlogs";
 import BlogDetail from "./components/BlogDetail";
 import { Routes, Route } from "react-router-dom";
+import ScrollToSection from "./components/ScrollToSection";
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToSection />
       <Routes>
         <Route
           path="/"
