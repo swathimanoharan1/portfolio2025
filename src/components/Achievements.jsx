@@ -36,6 +36,13 @@ const achievementBadges = [
       "https://gameconfig.lex.infosysapps.com/Gamification/GetBadgeImage/?AppId=2&TokenNo=DDUPPGZGMT&BadgeCode=CQJPU2F78Q",
     provider: "Infosys",
   },
+  {
+    name: "Microsoft AI Skill Fest",
+    imageUrl: "/microsoft-ai-skills-fest.svg",
+    verifyUrl:
+      "https://learn.microsoft.com/api/achievements/share/en-us/SWATHIM-7550/8ZERH8CW?sharingId=F0C3C45EF3662A3F",
+    provider: "Microsoft",
+  },
 ];
 
 const Achievements = () => {

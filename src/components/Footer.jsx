@@ -43,6 +43,7 @@ const Footer = () => {
 
         {/* Right Side - Hire Me Button */}
         <a
+          target="_blank"
           href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=swathimanoharan45303@gmail.com&tf=1"
           className="bg-gradient-to-r from-[#453634] to-[#D93D22] text-white px-6 py-2 rounded-full font-semibold shadow hover:brightness-110 transform transition-transform duration-500 ease-in-out hover:scale-110"
         >

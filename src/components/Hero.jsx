@@ -11,7 +11,7 @@ const Hero = () => {
       className="min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 pt-28 md:pt-16 pb-16 bg-[#0f0f0f] text-white"
     >
       {/* Left Content */}
-      <div className="max-w-2xl text-center md:text-left mt-8 md:mt-0">
+      <div className="max-w-2xl text-center md:text-left mt-8 md:mt-0 mx-5">
         <h1 className="text-4xl sm:text-5xl font-bold mb-2">
           I’m Swathi
           <br />
