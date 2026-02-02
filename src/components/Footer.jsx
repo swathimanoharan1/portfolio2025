@@ -12,7 +12,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-6">
         {/* Left Side - Portfolio Name */}
         <div className="text-lg font-semibold">
-          Swathi {new Date().getFullYear()}
+          Swathi {new Date().toLocaleString("default", { month: "short" })},{" "}
+          {new Date().getFullYear()}
         </div>
 
         {/* Center - Social Links */}
