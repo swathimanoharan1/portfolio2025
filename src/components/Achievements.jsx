@@ -23,6 +23,12 @@ const achievementBadges = [
     provider: "Infosys",
   },
   {
+    name: "Salesforce Certified AI Associate",
+    imageUrl: "/SalesforceCertifiedAIAssociate.png",
+    verifyUrl: "https://www.salesforce.com/trailblazer/profile",
+    provider: "Salesforce",
+  },
+  {
     name: "Infosys AI Aware",
     imageUrl: "/InfosysAIAware.png",
     verifyUrl:
@@ -43,22 +49,70 @@ const achievementBadges = [
       "https://learn.microsoft.com/api/achievements/share/en-us/SWATHIM-7550/8ZERH8CW?sharingId=F0C3C45EF3662A3F",
     provider: "Microsoft",
   },
+  {
+    name: "Common Wealth Job Simulation",
+    imageUrl: "/CommonWealthJobSimulation.png",
+    verifyUrl:
+      "https://www.theforage.com/completion-certificates/2sNmYuurxgpFYawco/xv8eSGu7nksKNiCQj_2sNmYuurxgpFYawco_tR4kTHJmkokcCnpxT_1749374954089_completion_certificate.pdf",
+    provider: "Forage",
+  },
 ];
 
 const Achievements = () => {
-  const scrollRef = useRef(null);
+  const mobileRef = useRef(null);
+  const desktopRef = useRef(null);
 
-  // Optional auto-scroll effect (you can remove this if not needed)
+  // Desktop scrolling
   useEffect(() => {
+    const container = desktopRef.current;
+    if (!container) return;
+
+    const cardWidth = 160 + 40; // image width + gap (adjust to your actual sizes)
+    let index = 0;
+
     const interval = setInterval(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollBy({
-          left: scrollRef.current.offsetWidth,
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+      // If at (or very near) the end → jump back to start
+      if (container.scrollLeft >= maxScrollLeft - 10) {
+        container.scrollTo({
+          left: 0,
+          behavior: "auto",
+        });
+        index = 0;
+      } else {
+        index += 1;
+        container.scrollBy({
+          left: cardWidth, // move one card at a time
           behavior: "smooth",
         });
       }
     }, 3000); // every 3 seconds
 
+    return () => clearInterval(interval);
+  }, []);
+
+  // Mobile scrolling
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const container = mobileRef.current;
+      if (!container) return;
+
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+      // If at (or very near) the end → jump back to start
+      if (container.scrollLeft >= maxScrollLeft - 10) {
+        container.scrollTo({
+          left: 0,
+          behavior: "auto",
+        });
+      } else {
+        container.scrollBy({
+          left: container.clientWidth,
+          behavior: "smooth",
+        });
+      }
+    }, 3000); // every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -69,9 +123,9 @@ const Achievements = () => {
       </h3>
       <div className="w-20 h-0.5 mx-auto bg-red-500 mb-6" />
 
-      {/* Mobile: Horizontal scroll carousel */}
+      {/* Mobile: Horizontal auto-scroll carousel */}
       <div
-        ref={scrollRef}
+        ref={mobileRef}
         className="flex sm:hidden overflow-x-auto no-scrollbar gap-6 px-4 snap-x snap-mandatory scroll-smooth"
       >
         {achievementBadges.map((badge, index) => (
@@ -86,22 +140,25 @@ const Achievements = () => {
             <img
               src={badge.imageUrl}
               alt={badge.name}
-              className="w-48 h-48 mx-auto rounded-lg shadow-lg border border-gray-700"
+              className="w-44 h-44 mx-auto rounded-lg shadow-lg border border-gray-700"
               loading="lazy"
             />
           </a>
         ))}
       </div>
 
-      {/* Desktop: Flex grid view */}
-      <div className="hidden sm:flex flex-wrap justify-center gap-12 px-4 mt-12">
+      {/* Desktop: Horizontal auto-scroll carousel */}
+      <div
+        ref={desktopRef}
+        className="hidden sm:flex overflow-x-auto no-scrollbar gap-10 px-6 mt-12 max-w-[1120px] mx-auto"
+      >
         {achievementBadges.map((badge, index) => (
           <a
             key={index}
             href={badge.verifyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="transform hover:scale-105 transition-transform duration-50 text-center"
+            className="shrink-0 hover:scale-105 transition-transform"
             title={`View ${badge.name} on ${badge.provider}`}
           >
             <img

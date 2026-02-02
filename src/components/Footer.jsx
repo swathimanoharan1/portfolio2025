@@ -11,7 +11,9 @@ const Footer = () => {
       {/* Footer Content */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-6">
         {/* Left Side - Portfolio Name */}
-        <div className="text-lg font-semibold">Swathi 2025</div>
+        <div className="text-lg font-semibold">
+          Swathi {new Date().getFullYear()}
+        </div>
 
         {/* Center - Social Links */}
         <div className="flex gap-6 text-base">
